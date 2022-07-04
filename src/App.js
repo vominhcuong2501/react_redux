@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import BaiTapOanTuXi from './Component/BaiTapOanTuXi/BaiTapOanTuXi';
+import Parent from './Lifecycle/Demo/Parent';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <BaiTapOanTuXi />
+      {/* <BaiTapOanTuXi /> */}
+      <Parent />
     </div>
   );
 }
