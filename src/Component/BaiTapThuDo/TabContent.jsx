@@ -1,18 +1,26 @@
 import React, { Component } from "react";
-import {connect} from 'react-redux';
-
-// .filter(ele => ele.type === this.props.categories.type)
+import clothes from "../../Data/clothes.json";
+import { connect } from "react-redux";
 class TabContent extends Component {
   renderMenu = () => {
-    return this.props.categories.map(ele=> {
+    return clothes.tabPanes.filter(ele => ele.type === this.props.selectedType).map((ele) => {
+      const {imgSrc_png, imgSrc_jpg, id, name, type} = ele
       return (
-        <div className="col-md-3 mb-4" key={ele.id}>
-          <div className="card text-center" >
-            <img src={ele.imgSrc_jpg} />
+        <div className="col-md-3 mb-4" key={id}>
+          <div className="card text-center">
+            <img src={imgSrc_jpg} />
             <h4>
-              <b>{ele.name}</b>
+              <b>{name}</b>
             </h4>
-            <button className="btn btn-success" onClick={() => this.props.chonDo(ele)}>Thử đồ</button>
+            <button
+              className="btn btn-success"
+              onClick={() => this.props.dispatch({
+                type: "CHANGE_CLOTHES",
+                payload: {type, imgSrc_png}
+              })}
+            >
+              Thử đồ
+            </button>
           </div>
         </div>
       );
@@ -32,23 +40,4 @@ class TabContent extends Component {
     );
   }
 }
-
-const mapStateToProps = state => {
-  return {
-    categories: state.thuDoReducer.categories,
-  }
-}
-const mapDispatchToProps = dispatch => {
-  return {
-    chonDo: (clothes) => {
-      dispatch({
-        type: "CHON_DO",
-        payload: {
-          type: clothes.type,
-          img: clothes.imgSrc_png
-        }
-      })
-    }
-  }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(TabContent)
+export default connect(state => ({...state.thuDoReducer}))(TabContent)

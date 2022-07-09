@@ -11,7 +11,7 @@ class Tabs extends Component {
             className={`nav-link ${ele.active && "active"}`}
             data-toggle="pill"
             href={`#${ele.tabName}`}
-            onClick = {() => this.props.setClothes(ele.type)}
+            onClick = {() => this.props.setSelectedType(ele.type)}
           >
             {ele.showName}
           </a>
@@ -26,10 +26,10 @@ class Tabs extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    setClothes: (payload) => {
+    setSelectedType: (type) => {
       dispatch({
-        type: "SET_CLOTHES",
-        payload
+        type: "SET_SELECTED_TYPE",
+        payload: type
       })
     }
   }

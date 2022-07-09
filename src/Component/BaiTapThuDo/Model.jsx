@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 
 class Model extends Component {
   render() {
-    let {hairstyle, necklaces, topclothes, botclothes, handbags, shoes, background} = this.props.model;
+    const {hairstyle, necklaces, topclothes, botclothes, handbags, shoes, background} = this.props.model;
     return (
       <div className="contain">
         <div className="body" />
