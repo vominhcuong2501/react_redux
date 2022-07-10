@@ -8,6 +8,7 @@ import UserProfile from './FormValidation/UserProfile/UserProfile';
 import DemoJSS from './JSS_StyledComponent/DemoJSS/DemoJSS';
 import DemoTheme from './JSS_StyledComponent/Themes/DemoTheme';
 import ToDoList from './JSS_StyledComponent/BaiTapStyleComponent/TodoList/ToDoList';
+import BaiTapBookingTicket from './Component/BaiTapBookingTicket/BaiTapBookingTicket';
 
 
 function App() {
@@ -15,12 +16,13 @@ function App() {
     <div className="App">
       {/* <BaiTapOanTuXi /> */}
       {/* <Parent /> */}
-      <BaiTapThuDo />
+      {/* <BaiTapThuDo /> */}
       {/* <DemoPureComponent /> */}
       {/* <UserProfile /> */}
       {/* <DemoJSS /> */}
     {/* <DemoTheme /> */}
     {/* <ToDoList /> */}
+    <BaiTapBookingTicket />
     </div>
   );
 }
