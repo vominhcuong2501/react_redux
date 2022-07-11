@@ -28,9 +28,14 @@ export const BookingTicketReducer = (
     case "XOA_GHE": {
       let mangGheDangDatUpdate = [...state.mangGheDangDat];
       let index = mangGheDangDatUpdate.findIndex(
-        (gheDangDat) => gheDangDat.soGhe === payload.soGhe
+        (gheDangDat) => gheDangDat.soGhe === payload
       );
-      mangGheDangDatUpdate.splice(index, 1);
+      
+      if (index !== -1) {
+        // khi ng dùng click ghế đã có trong mảng thì sẽ remove ghế đó đi
+        mangGheDangDatUpdate.splice(index, 1);
+      }
+      // cập nhật lại state để render lại giao diện
       state.mangGheDangDat = mangGheDangDatUpdate;
       return { ...state };
     }
