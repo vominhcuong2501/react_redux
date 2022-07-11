@@ -28,7 +28,7 @@ export default class BaiTapBookingTicket extends Component {
           <h1 className="text-center text-warning mt-3">BÀI TẬP ĐẶT VÉ</h1>
           <div className="row">
             <div className="col-8">
-              <div style={{paddingRight: 30}}>
+              <div style={{ paddingRight: 30 }}>
                 <div className="screen my-3 mx-auto">
                   <p
                     className="text-center"

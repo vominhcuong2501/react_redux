@@ -49,13 +49,11 @@
 
 .gheDuocChon {
     border: 3px solid orange;
-
     background: orange;
     color: #000;
-
     cursor: no-drop !important;
     border-radius: 5px;
-    width: 45px;
+    width: 50px;
     height: 35px;
 
 }
@@ -64,10 +62,9 @@
     background: rgb(109, 238, 109);
     border: 3px solid rgb(109, 238, 109);
     color: #000;
-
     cursor: pointer;
     border-radius: 5px;
-    width: 45px;
+    width: 50px;
     height: 35px;
 
 }
@@ -75,10 +72,9 @@
     background: #fff;
     border: 3px solid #fff;
     color: #000;
-
     cursor: pointer;
     border-radius: 5px;
-    width: 45px;
+    width: 50px;
     height: 35px;
 
 }
