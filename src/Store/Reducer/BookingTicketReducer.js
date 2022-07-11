@@ -1,6 +1,6 @@
 const DEFAULT_STATE = {
   mangGheDangDat: [],
-  mangGheDaDat: []
+  mangGheDaDat: [],
 };
 
 export const BookingTicketReducer = (
@@ -30,7 +30,7 @@ export const BookingTicketReducer = (
       let index = mangGheDangDatUpdate.findIndex(
         (gheDangDat) => gheDangDat.soGhe === payload
       );
-      
+
       if (index !== -1) {
         // khi ng dùng click ghế đã có trong mảng thì sẽ remove ghế đó đi
         mangGheDangDatUpdate.splice(index, 1);
@@ -40,16 +40,17 @@ export const BookingTicketReducer = (
       return { ...state };
     }
 
-    // case 'DAT_VE': {
-    // let mangGheDaDatUpdate = payload;
-    // for(let i =0; i < mangGheDaDatUpdate.length; i++) {
-    //     if(!mangGheDaDatUpdate[i].daDat) {
-    //         mangGheDaDatUpdate[i].daDat = true
-    //     }
-    // }
-    //     state.mangGheDaDat = mangGheDaDatUpdate;
-    //     return {...state}
-    // }
+    case "DAT_VE": {
+      let mangGheDaDatUpdate = payload;
+      for (let i = 0; i < mangGheDaDatUpdate.length; i++) {
+        if (!mangGheDaDatUpdate[i].daDat) {
+          mangGheDaDatUpdate[i].daDat = true;
+        }
+      }
+      state.mangGheDangDat = [];
+      state.mangGheDaDat = mangGheDaDatUpdate;
+      return { ...state };
+    }
     default:
       return { ...state };
   }

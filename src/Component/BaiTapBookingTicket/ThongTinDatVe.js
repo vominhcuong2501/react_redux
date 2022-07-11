@@ -61,26 +61,26 @@ class ThongTinDatVe extends Component {
             </tr>
           </tfoot>
         </table>
-        {/* <div className="text-right">
+        <div className="text-right">
           <button
             className="btn btn-success"
             onClick={() => this.props.datVe(this.props.mangGheDangDat)}
           >
             Đặt vé
           </button>
-        </div> */}
+        </div>
       </div>
     );
   }
 }
 const mapDispatchToProps = (dispatch) => {
   return {
-    // datVe: (item) => {
-    //   dispatch({
-    //     type: "DAT_VE",
-    //     payload: item,
-    //   });
-    // },
+    datVe: (item) => {
+      dispatch({
+        type: "DAT_VE",
+        payload: item,
+      });
+    },
     delete: (soGhe) => {
       dispatch({
         type: "XOA_GHE",

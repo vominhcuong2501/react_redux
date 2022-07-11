@@ -47,22 +47,23 @@
 }
 
 
-.gheDuocChon {
-    border: 3px solid orange;
-    background: orange;
+.gheDangChon {
+    background: rgb(109, 238, 109);
+    border: 3px solid rgb(109, 238, 109);
     color: #000;
-    cursor: no-drop !important;
+    cursor: pointer;
     border-radius: 5px;
     width: 50px;
     height: 35px;
 
 }
 
-.gheDangChon {
-    background: rgb(109, 238, 109);
-    border: 3px solid rgb(109, 238, 109);
+
+.gheDuocChon {
+    border: 3px solid orange;
+    background: orange;
     color: #000;
-    cursor: pointer;
+    cursor: no-drop !important;
     border-radius: 5px;
     width: 50px;
     height: 35px;
