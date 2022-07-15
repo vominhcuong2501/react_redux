@@ -9,6 +9,7 @@ import DemoJSS from './JSS_StyledComponent/DemoJSS/DemoJSS';
 import DemoTheme from './JSS_StyledComponent/Themes/DemoTheme';
 import ToDoList from './JSS_StyledComponent/BaiTapStyleComponent/TodoList/ToDoList';
 import BaiTapBookingTicket from './Component/BaiTapBookingTicket/BaiTapBookingTicket';
+import BaiTapThuKinh from './Component/BaiTapThuKinh/BaiTapThuKinh';
 
 
 function App() {
@@ -21,8 +22,9 @@ function App() {
       {/* <UserProfile /> */}
       {/* <DemoJSS /> */}
     {/* <DemoTheme /> */}
-    {/* <ToDoList /> */}
-    <BaiTapBookingTicket />
+    <ToDoList />
+    {/* <BaiTapBookingTicket /> */}
+    {/* <BaiTapThuKinh /> */}
     </div>
   );
 }
